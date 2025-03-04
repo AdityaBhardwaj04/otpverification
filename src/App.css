@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+ body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-image: url('C:/workspace/otp-client/src/assets/background.jpg'); 
+  background-size: cover;
+  background-position: center;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-container {
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr; 
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  gap: 2px;
+}
+  
+
+.image-section {
+  position: relative;
+  background-image: url('./assets/withoutbackground.png');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  transform-origin: center; 
+ }
+
+
+.image-section:hover {
+  transform: scale(1.2); 
+  filter: brightness(1.5); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
 }
+
+
+.otp-section {
+  display: flex;
+  background-color: rgba(255, 248, 220, 0.9);
+  padding: 0px;  
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-bottom: 50px;
+} 
+
+.celebration-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+}
+
+
+.celebration-gif {
+  width: 800px; 
+  height: auto;
+  border-radius: 100px;
+  margin-left: -100px;
+  margin-bottom: -100px;
+   
+} 
